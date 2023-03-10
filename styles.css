@@ -14,7 +14,6 @@ header {
 }
 
 footer, .subheader {
-    background-color: #5ba94a;
     color: white;
     text-align: right;
 }
@@ -25,6 +24,7 @@ footer, .subheader {
 }
 
 .subheader {
+    background-color: #0a7099;
     text-align: center;
     font-family: 'Roboto Slab', serif;
     font-weight: 350;
@@ -32,17 +32,16 @@ footer, .subheader {
     margin: 0px;
 }
 
-
-
-.logo_area, .subheader, footer { padding: 20px; }
+.logo_area, .subheader { padding: 20px; }
 
 
 /* Navbar */
 .nav {
     text-align: center;
     font-size: 16pt;
+    font-weight: 200;
     color: white;
-    background-color: #0a7099;
+    background-color: #5ba94a;
     padding: 5px;
     overflow: clip;
     border: 0;
@@ -62,6 +61,11 @@ footer, .subheader {
     color: #0a7099;
 }
 
+a.active {
+    color: #ffefc3 !important;
+}
+
+/* Columns */ 
 
 .columns-area {
     background-color: #ffefc3;
@@ -93,6 +97,8 @@ p {
     font-size: 12.5pt;
     font-weight: 300;
     line-height: 1.6;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
 }
 
 h1 {
@@ -116,10 +122,22 @@ a:visited{
 }
 
 a:hover {
-    background-color: #fff7db;
+    background-color: #ebf0f4;
 }
 
+a.active:hover {
+    color: #5ba94a !important;
+}
 
+/* etc. */
+
+footer {
+    padding: 14px;
+    background-color: #5ba94a;
+    box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+h3.small-title { margin-bottom: 5px; }
 
 
 
