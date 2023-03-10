@@ -46,6 +46,7 @@ footer, .subheader {
     overflow: clip;
     border: 0;
     line-height: 1.5;
+    min-width: none;
 }
   
 /* Navigation links */
@@ -75,17 +76,18 @@ a.active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;   
-    width: 100%;  
+    /* width: 100%;  */
 }
 
 .flex-col {
     display: flex;
     flex-direction: column;
-    /* flex-basis: 100%; */
+    flex-basis: 100%;
     flex: 1;
     padding: 20px;
     text-align: left;
-    width: 100%;
+    /* width: 100%; */
+    min-width: none;
     max-width: 450px;
 }
 
@@ -156,6 +158,19 @@ h3.small-title {
 
 .sponsor-spacer {
     padding-right: 35px;
+}
+
+@media (max-width: 600px) {
+
+    .columns-area {
+        flex-direction: column;
+    }
+
+    /*
+    .column {
+        width: 100%;
+    }
+    */
 }
 
 
