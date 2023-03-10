@@ -165,7 +165,6 @@ h3.small-title {
 
     .columns-area {
         flex-direction: column;
-        max-width: 100%;
     }
 
     .flex-col {
