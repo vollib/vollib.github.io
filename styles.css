@@ -63,6 +63,7 @@ footer, .subheader {
 .column-two {}
 
 p {
+    font-size: 12.5pt;
     font-weight: 300;
     line-height: 1.6;
 }
