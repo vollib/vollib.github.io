@@ -38,7 +38,7 @@ footer, .subheader {
 /* Navbar */
 .nav {
     text-align: center;
-    font-size: 16pt;
+    font-size: 15pt;
     font-weight: 200;
     color: white;
     background-color: #5ba94a;
@@ -132,12 +132,32 @@ a.active:hover {
 /* etc. */
 
 footer {
-    padding: 14px;
+    padding: 12px;
     background-color: #5ba94a;
-    box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-h3.small-title { margin-bottom: 5px; }
+h3.small-title {
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.sponsor-image {
+    width: 140px;
+    float: left;
+    padding-bottom: 15px;
+}
+
+
+.ikayzo {
+    width: 155px;
+    padding-top: 2px;
+}
+
+.sponsor-spacer {
+    padding-right: 35px;
+}
+
 
 
 
