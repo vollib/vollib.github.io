@@ -1,25 +1,91 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Source+Code+Pro:ital,
-            "wght@0,400;0,600;1,400;1,600&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Header & Footer Area */
+
+header {
+    text-align: center;
+    width: 100%;
+}
+
+footer, .subheader {
+    background-color: #5ba94a;
+    color: white;
+    text-align: right;
+}
+
+.logo_area {
+    text-align: center;
+    background-color: #d9ebd3;
+}
+
+.subheader {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 350;
+    font-size: 15pt;
+    margin: 0px;
+}
+
+.logo_area, .subheader, footer { padding: 20px; }
+
+/* Columns Area */
+
+.columns-area {
+    background-color: #ffefc3;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+    width: 100%;  
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    /* flex-basis: 100%; */
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 450px;
+}
+
+.column-one {}
+
+.column-two {}
+
+p {
+    font-weight: 300;
+    line-height: 1.6;
+}
 
 h1 {
     font-family: "Ubuntu";
     text-align: center;
     font-weight: 400;
+    background-color: #d9ebd3;
 }
 
-body {
-    font-family: 'Ubuntu', sans-serif;
-}
 
-p {
-    text-align: center;
-    font-weight: 300;
-    line-height: 1.6;
-}
 
-.subtitle {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 350;
-    font-size: 12pt;
-    color: rgb(82, 151, 69);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+

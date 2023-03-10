@@ -1,21 +1,71 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Welcome to vollib</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-<body style="padding: 20px">
-    <p class="subtitle">
-        <img src="images/vollib-logo.svg" width="200px" style="margin-bottom: 10px"/><br/>
-        Blazingly Fast & Accurate<br/>
-        Option Pricing &bull; Implied Volatility &bull; Greeks<br/>
-        Python &bull; Java &bull; TypeScript &bull; Kotlin<br/>
-    </p>
-    <h1>Welcome to vollib's new home.</h1>
-    <p>
-        こんにちは。I'm hosted with GitHub Pages.<br/>
-        This is the staging site. The production site will be on <a href="https://vollib.org">vollib.org</a>.
-    </p>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to vollib</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo_area">
+            <img src="images/vollib-logo.svg" width="200px"/>
+        </div>
+        <p class="subheader">
+            Blazingly Fast & Accurate<br/>
+            Option Pricing &bull; Implied Volatility &bull; Greeks<br/>
+            Python &bull; Java &bull; TypeScript &bull; Kotlin<br/>
+        </p>
+    </header>
+    <div class="columns-area">
+        <div class="column-one flex-col">
+            <p>
+            Vollib is a collection of libraries for calculating option prices, implied volatility and greeks.
+            What makes vollib special is that it is built around Peter Jäckel's LetsBeRational, an extremely
+            fast and accurate technique for obtaining Black's implied volatility.
+            </p>
+            <p>
+            LetsBeRational can obtain implied volatility from option prices with as little as two iterations
+            to maximum attainable precision on standard (64 bit floating point) hardware for all possible inputs.
+            </p>
+            <p>
+            Another advantage of LetsBeRational is its fast and accurate implementation of the cumulative normal
+            distribution function. Jäckel's implementation provides better accuracy across a wider range of inputs,
+            while being two orders of magnitude faster than its equivalent in scipy.stats.
+            </p>
+            <p>
+            Building on this solid foundation, vollib provides functions to calculate option prices, implied
+            volatility and greeks using Black, Black-Scholes, and Black-Scholes-Merton. vollib implements both
+            analytical and numerical greeks.
+            </p>
+        </div>
+        <div class="column-two flex-col">
+            <p>
+            LetsBeRational was originally written in C, and the Python lets_be_rational Version 1.0.9 exposes
+            the original functions by means of a SWIG wrapper. Vollib Version 0.1.5 uses the SWIG-wrapped version
+            of lets_be_rational, and is incompatible with Python 3.x.
+            </p>
+            <p>
+            Based on popular demand, we have released py_vollib and py_lets_be_rational. With these new versions
+            we have eliminated the dependencies on C and SWIG, as both libraries are in pure Python. Each is
+            compatible with Python 3.x as well as Python 2.7. The original C/SWIG-dependent versions will remain
+            available indefinitely as lets_be_rational and vollib.
+            </p>
+            <p>
+            Translation of LetsBeRational from C to Python resulted in significantly slower performance. However,
+            the use of Numba restored the Python code's execution speed close to the original levels of C+SWIG.
+            </p>
+            <p>
+            In the same spirit, as of this release, Gammon Capital are pleased to host pure Javascript and pure
+            Java versions of both LetsBeRational and Vollib as open source github projects.
+            </p>
+            <p>
+            If you use any version of LetsBeRational or Vollib we would be most grateful if you would kindly
+            give credit by linking back to this page.
+            </p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2017 Larry Richards
+    </footer>
 </body>
 </html>
