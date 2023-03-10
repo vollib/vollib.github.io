@@ -151,16 +151,13 @@ h3.small-title {
 }
 
 @media (max-width: 899px) {
-
-    /*
-    .columns-area {
+    .flex {
         flex-direction: column;
     }
-    */
 
     .flex > div {
-        width: 100%;
         max-width: 650px;
+        padding-bottom: 0px;
     }
 }
 
