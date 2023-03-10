@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffefc3;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.flex > div {
+    max-width: 450px;
+    padding: 20px;
+    text-align: left;
+}
+
 body {
     font-family: 'Ubuntu', sans-serif;
     padding: 0px;
@@ -71,32 +86,6 @@ a.active {
 
 /* Columns */ 
 
-.columns-area {
-    background-color: #ffefc3;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;   
-    width: 100%;
-}
-
-.flex-col {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    padding: 20px;
-    text-align: left;
-    width: 100%;
-    max-width: 450px;
-}
-
-.column-one {}
-
-.column-two {}
-
 p {
     font-size: 12.5pt;
     font-weight: 300;
@@ -161,15 +150,17 @@ h3.small-title {
     padding-right: 35px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 899px) {
 
+    /*
     .columns-area {
         flex-direction: column;
     }
+    */
 
-    .flex-col {
+    .flex > div {
         width: 100%;
-        max-width: 550px;
+        max-width: 650px;
     }
 }
 
