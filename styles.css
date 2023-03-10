@@ -32,9 +32,36 @@ footer, .subheader {
     margin: 0px;
 }
 
+
+
 .logo_area, .subheader, footer { padding: 20px; }
 
-/* Columns Area */
+
+/* Navbar */
+.nav {
+    text-align: center;
+    font-size: 16pt;
+    color: white;
+    background-color: #0a7099;
+    padding: 5px;
+    overflow: clip;
+    border: 0;
+    line-height: 1.5;
+}
+  
+/* Navigation links */
+.nav a, .nav a:visited {
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    border: 0;
+}
+
+.nav a:hover {
+    background-color: #ffefc3;
+    color: #0a7099;
+}
+
 
 .columns-area {
     background-color: #ffefc3;
@@ -73,6 +100,23 @@ h1 {
     text-align: center;
     font-weight: 400;
     background-color: #d9ebd3;
+}
+
+/* Links */
+
+a {
+    color: #5ba94a;
+    text-decoration: none;
+    border-bottom: 1px dashed #5ba94a;
+}
+
+a:visited{
+    color: #0386b7;
+    border-bottom: 1px dashed  
+}
+
+a:hover {
+    background-color: #fff7db;
 }
 
 
