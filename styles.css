@@ -33,7 +33,7 @@ header {
     width: 100%;
 }
 
-footer, .subheader {
+footer {
     color: white;
     text-align: right;
 }
@@ -44,12 +44,14 @@ footer, .subheader {
 }
 
 .subheader {
+    color: white;
     background-color: #0a7099;
     text-align: center;
     font-family: 'Roboto Slab', serif;
     font-weight: 350;
-    font-size: 15pt;
+    font-size: 12pt;
     margin: 0px;
+    padding-top: 0 !important;
 }
 
 .subheader-headline {
@@ -57,10 +59,20 @@ footer, .subheader {
     font-weight: 400;
     padding-bottom: 8px;
     color: #ebf0f4;
-    line-height: 1;
+    margin-block: 0;
 }
 
-.logo_area, .subheader { padding: 20px; }
+.no-padding {
+    padding: 0;
+}
+
+.subheader-body {
+    padding-bottom: 8px;
+    line-height: 1.6;
+    margin-block: 0;
+}
+
+.logo_area, .subheader { padding: 20px !important; }
 
 
 /* Navbar */
