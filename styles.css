@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
 
+body {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -17,12 +23,6 @@
     max-width: 450px;
     padding: 20px;
     text-align: left;
-}
-
-body {
-    font-family: 'Ubuntu', sans-serif;
-    padding: 0px;
-    margin: 0px;
 }
 
 /* Header & Footer Area */
@@ -84,7 +84,7 @@ a.active {
     color: #ffefc3 !important;
 }
 
-/* Columns */ 
+/* paragraph and headlines */ 
 
 p {
     font-size: 12.5pt;
@@ -150,6 +150,20 @@ h3.small-title {
     padding-right: 35px;
 }
 
+/* bullets */
+
+ul {
+    font-size: 12.5pt;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-block-start: .2em;
+}
+
+ul.a {
+    list-style-type: circle;
+}
+  
+/* media queries TODO - work on iPhones */
 @media (max-width: 899px) {
     .flex {
         flex-direction: column;
