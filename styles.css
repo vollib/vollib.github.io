@@ -20,6 +20,7 @@ body {
 }
 
 .flex > div {
+    min-width: 300px;
     max-width: 450px;
     padding: 20px;
     text-align: left;
@@ -49,6 +50,14 @@ footer, .subheader {
     font-weight: 350;
     font-size: 15pt;
     margin: 0px;
+}
+
+.subheader-headline {
+    font-size: 19pt;
+    font-weight: 400;
+    padding-bottom: 8px;
+    color: #ebf0f4;
+    line-height: 1;
 }
 
 .logo_area, .subheader { padding: 20px; }
@@ -164,7 +173,7 @@ ul.a {
 }
   
 /* media queries TODO - work on iPhones */
-@media (max-width: 899px) {
+@media (max-width: 799px) {
     .flex {
         flex-direction: column;
     }
