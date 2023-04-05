@@ -74,15 +74,18 @@ footer {
 
 /* Navbar */
 .nav {
-    text-align: center;
+    background-color: #5ba94a;
+    border: 0;
+    color: white;
     font-size: 15pt;
     font-weight: 200;
-    color: white;
-    background-color: #5ba94a;
-    padding: 5px;
-    overflow: clip;
-    border: 0;
     line-height: 1.5;
+    overflow: clip;
+    text-align: center;
+}
+
+.nav a {
+  display: inline-block;
 }
   
 /* Navigation links */
