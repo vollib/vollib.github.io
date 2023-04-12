@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contents: &mdash; vollib 0.1.5 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="vollib 0.1.5 documentation" href="#"/>
+        <link rel="next" title="vollib" href="apidoc/modules.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> vollib
+          
+
+          
+            
+            <img src="_static/vollib_60.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/modules.html">vollib modules</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">vollib</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Contents:</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p># <cite>vollib</cite></p>
+<p><cite>vollib</cite> is a python library for calculating option prices,
+implied volatility and greeks. At its core is Peter Jäckel&#8217;s
+source code for <cite>LetsBeRational</cite>, an extremely fast and accurate algorithm
+for obtaining Black&#8217;s implied volatility from option prices.</p>
+<p>Building on this solid foundation, <cite>vollib</cite> provides functions
+to calculate option prices, implied volatility and greeks using
+Black, Black-Scholes, and Black-Scholes-Merton. <cite>vollib</cite>
+implements both analytical and numerical greeks for each of the three pricing formulae.</p>
+<p>### About the initial release</p>
+<p>This is the initial release of <cite>vollib</cite>.  Tests and documentation are still incomplete.</p>
+<p>### Dependencies</p>
+<p><cite>vollib</cite> was written in Python 2.7.  It depends on the <code class="docutils literal"><span class="pre">`lets_be_rational`</span></code> package, a simple (SWIG) wrapper around Peter Jäckel&#8217;s original C source code.</p>
+<p>To install via pip, type the following:</p>
+<p><code class="docutils literal"><span class="pre">`</span>
+<span class="pre">&gt;&gt;&gt;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">vollib</span>
+<span class="pre">`</span></code></p>
+<p>Installing <cite>vollib</cite> via pip will automatically install the necessary dependencies,
+except for SWIG, pip, and Python.  This has been tested to work on Windows, Linux and Macintosh OS X.</p>
+<p>Python, pip and SWIG must be installed prior to installing <code class="docutils literal"><span class="pre">`vollib`</span></code>.</p>
+<p><cite>lets_be_rational</cite> is quite stable compared to <cite>vollib</cite>, which is likely to be updated frequently.</p>
+<p>For those who wish to clone the vollib repo, you might prefer to install <cite>lets_be_rational</cite>
+separately with pip, since this takes care of the C compilation.</p>
+<p>### About &#8220;Let&#8217;s be Rational&#8221;:</p>
+<p>[&#8220;Let&#8217;s Be Rational&#8221;](<a class="reference external" href="http://www.pjaeckel.webspace.virginmedia.com/LetsBeRational.pdf">http://www.pjaeckel.webspace.virginmedia.com/LetsBeRational.pdf</a>) is a paper by [Peter Jäckel](<a class="reference external" href="http://jaeckel.org">http://jaeckel.org</a>) showing <em>&#8220;how Black&#8217;s volatility can be implied from option prices with as little as two iterations to maximum attainable precision on standard (64 bit floating point) hardware for all possible inputs.&#8221;</em></p>
+<p>The paper is accompanied by the full C source code, which resides at [www.jaeckel.org/LetsBeRational.7z](www.jaeckel.org/LetsBeRational.7z).</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
+Copyright © 2013-2014 Peter Jäckel.</p>
+<p>Permission to use, copy, modify, and distribute this software is freely granted,
+provided that this notice is preserved.</p>
+<p>WARRANTY DISCLAIMER
+The Software is provided &#8220;as is&#8221; without warranty of any kind, either express or implied,
+including without limitation any implied warranties of condition, uninterrupted use,
+merchantability, fitness for a particular purpose, or non-infringement.
+<a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
+<p>### Links:</p>
+<blockquote>
+<div><ul class="simple">
+<li>[Let&#8217;s Be Rational](<a class="reference external" href="http://www.pjaeckel.webspace.virginmedia.com/LetsBeRational.pdf">http://www.pjaeckel.webspace.virginmedia.com/LetsBeRational.pdf</a>)</li>
+<li>[pip](<a class="reference external" href="https://pypi.python.org/pypi/pip">https://pypi.python.org/pypi/pip</a>)</li>
+<li>[SWIG](<a class="reference external" href="http://www.swig.org/download.html">http://www.swig.org/download.html</a>).</li>
+<li>[Licence](<a class="reference external" href="http://vollib.org/license">http://vollib.org/license</a>)</li>
+<li>[Vollib Home](<a class="reference external" href="http://vollib.org">http://vollib.org</a>)</li>
+</ul>
+</div></blockquote>
+<div class="section" id="contents">
+<h1>Contents:<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound" id="mastertoc">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/modules.html">vollib modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/vollib.html">vollib package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="apidoc/vollib.black.html">vollib.black package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="apidoc/vollib.black.greeks.html">vollib.black.greeks package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="apidoc/vollib.black_scholes.html">vollib.black_scholes package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="apidoc/vollib.black_scholes.greeks.html">vollib.black_scholes.greeks package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="apidoc/vollib.black_scholes_merton.html">vollib.black_scholes_merton package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="apidoc/vollib.black_scholes_merton.greeks.html">vollib.black_scholes_merton.greeks package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="apidoc/vollib.helper.html">vollib.helper package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apidoc/vollib.tests.html">vollib.tests package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="apidoc/modules.html" class="btn btn-neutral float-right" title="vollib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Gammon Capital LLC..
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.5',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
