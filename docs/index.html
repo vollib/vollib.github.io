@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>vollib</title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link href="/styles/style.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+  <div class="container">
+    <a href="/">
+      <img class="logo" src="/images/vollib_logo.png" alt="vollib"/>
+    </a>
+    <div class="wrapper">
+      <div class="banner">
+      	<h3>
+          blazingly fast & accurate<br>
+          option pricing, implied volatility, and greeks<br>
+          in python, java, and javascript
+        </h3>
+      </div>
+      <div class="nav">
+      	<ul>
+        	<li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropbtn">Source Code</a>
+            <ul class="dropdown-content">
+              <li class="dropdown-section-head">Python (2 and 3)</li>
+              <li><a href="https://github.com/vollib/py_vollib">py_vollib</a></li>
+              <li><a href="https://github.com/vollib/py_lets_be_rational">py_lets_be_rational</a></li>
+              <li class="dropdown-section-head">C + Swig + Python 2</li>
+              <li><a href="https://github.com/vollib/vollib/">vollib</a></li>
+              <li><a href="https://github.com/vollib/lets_be_rational/">lets_be_rational</a></li>
+              <li class="dropdown-section-head">JavaScript</li>
+              <li><a href="https://github.com/vollib/js_lets_be_rational/">js_lets_be_rational</a></li>
+              <li class="dropdown-section-head">Java</li>
+              <li><a href="https://github.com/vollib/j_lets_be_rational/">j_lets_be_rational</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropbtn">Documentation</a>
+            <ul class="dropdown-content">
+              <li class="dropdown-section-head">Python</li>
+              <li><a href="/documentation/python/1.0.2">py_vollib v1.0.2</a></li>
+              <li><a href="/documentation/python/0.1.5">vollib v0.1.5</a></li>
+              <li class="dropdown-section-head">JavaScript (coming soon)</li>
+              <li class="dropdown-section-head">Java (coming soon)</li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropbtn">Installation</a>
+            <ul class="dropdown-content">
+              <li class="dropdown-section-head">Python (2 and 3)</li>
+              <li><a href="https://github.com/vollib/py_vollib#dependencies">py_vollib</a></li>
+              <li><a href="https://github.com/vollib/py_lets_be_rational#dependencies">py_lets_be_rational</a></li>
+              <li class="dropdown-section-head">C + Swig + Python 2</li>
+              <li><a href="https://github.com/vollib/vollib#dependencies">vollib</a></li>
+              <li><a href="https://github.com/vollib/lets_be_rational#dependencies">lets_be_rational</a></li>
+              <li class="dropdown-section-head">JavaScript</li>
+              <li><a href="https://github.com/vollib/js_lets_be_rational/">js_lets_be_rational</a></li>
+              <li class="dropdown-section-head">Java</li>
+              <li><a href="https://github.com/vollib/j_lets_be_rational/">j_lets_be_rational</a></li>
+            </ul>
+          </li>
+          <li><a href="/license.html">License</a></li>
+        </ul>
+      </div>
+      <div class="page">
+        <div class="content">
+          <p>Vollib is a collection of libraries for calculating option prices, implied volatility and greeks.  What makes vollib special is that it is built around <a href = "http://jaeckel.org">Peter Jäckel's</a> LetsBeRational, an extremely fast and accurate technique for obtaining Black's implied volatility.</p>
+          <p>LetsBeRational can obtain implied volatility from option prices with as little as two iterations to maximum attainable precision on standard (64 bit floating point) hardware for all possible inputs.</p>
+          <p>Another advantage of LetsBeRational is its fast and accurate implementation of the cumulative normal distribution function.  Jäckel's implementation provides better accuracy across a wider range of inputs, while being two orders of magnitude faster than its equivalent in scipy.stats.</p>
+          <p>Building on this solid foundation, vollib provides functions to calculate option prices, implied volatility and greeks using Black, Black-Scholes, and Black-Scholes-Merton.  vollib implements both analytical and numerical greeks.</p>
+          <p>LetsBeRational was originally written in C, and the Python lets_be_rational Version 1.0.9 exposes the original functions by means of a SWIG wrapper. Vollib Version 0.1.5 uses the SWIG-wrapped version of lets_be_rational, and is incompatible with Python 3.x.</p>
+          <p>Based on popular demand, we have released py_vollib and py_lets_be_rational.  With these new versions we have eliminated the dependencies on C and SWIG, as both libraries are in pure Python.  Each is compatible with Python 3.x as well as Python 2.7.  The original C/SWIG-dependent versions will remain available indefinitely as lets_be_rational and vollib.</p>
+          <p>Translation of LetsBeRational from C to Python resulted in significantly slower performance.  However, the use of Numba restored the Python code's execution speed close to the original levels of C+SWIG.</p>
+          <p>In the same spirit, as of this release, Gammon Capital are pleased to host pure Javascript and pure Java versions of both LetsBeRational and Vollib as open source github projects.</p>
+          <p>If you use any version of LetsBeRational or Vollib we would be most grateful if you would kindly give credit by linking back to this page.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      &copy; 2017 <a href = "http://www.gammoncap.com">Gammon Capital LLC</a>
+    </div>
+  </div>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-96712613-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
