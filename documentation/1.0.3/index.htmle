@@ -30,7 +30,8 @@
           
           <a href="#" class="icon icon-home">
             py_vollib
-              <img src="./documentation/1.0.3/_static/vollib-logo.svg" class="logo" alt="Logo" />
+              <img src="../vollib-logo.svg" class="logo" alt="Logo" />
+
 
           </a>
 <div role="search">
