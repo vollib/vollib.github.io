@@ -23,16 +23,20 @@ author = 'Larry Richards'
 release = '1.0.3'
 
 extensions = [
+    'autoapi.extension',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.coverage',
     'sphinx.ext.imgmath',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode']
+    'sphinx.ext.viewcode',
+    "sphinxcontrib.jquery"
+    ]
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+exclude_patterns = ['**/ref_python/**', 'py_vollib/helpers/**']
 source_parsers     = {'.md': CommonMarkParser}
 source_suffix      = ['.rst', '.md', '.py']
 master_doc         = 'index'
@@ -47,11 +51,19 @@ html_favicon = "_static/favicon.ico"
 html_theme_path    = [sphinx_rtd_theme.get_html_theme_path()]
 pygments_style = 'sphinx'
 
+modindex_common_prefix = ['py_vollib.']
+add_module_names = False
+
+
+
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_static_path = ['_static']
+autoapi_dirs = ['../py_vollib']
+
+
 
 
 

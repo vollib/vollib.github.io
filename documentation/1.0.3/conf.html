@@ -7,11 +7,13 @@
   <title>&lt;no title&gt; &mdash; py_vollib 1.0.3 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
@@ -30,7 +32,6 @@
           
           <a href="index.html" class="icon icon-home">
             py_vollib
-              <img src="_static/vollib-logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -40,10 +41,11 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul class="simple">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -85,17 +87,21 @@ copyright = ‘2023, Larry Richards’
 author = ‘Larry Richards’
 release = ‘1.0.3’</p>
 <dl class="simple">
-<dt>extensions = [</dt><dd><p>‘sphinx.ext.autodoc’,
+<dt>extensions = [</dt><dd><p>‘autoapi.extension’,
+‘sphinx.ext.autodoc’,
 ‘sphinx.ext.doctest’,
 ‘sphinx.ext.coverage’,
 ‘sphinx.ext.imgmath’,
 ‘sphinx.ext.ifconfig’,
-‘sphinx.ext.viewcode’]</p>
+‘sphinx.ext.viewcode’,
+“sphinxcontrib.jquery”
+]</p>
 </dd>
 </dl>
 <p># – General configuration —————————————————
 # <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration">https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration</a></p>
-<p>source_parsers     = {‘.md’: CommonMarkParser}
+<p>exclude_patterns = [’<strong>/ref_python/</strong>’, ‘py_vollib/helpers/<a href="#id1"><span class="problematic" id="id2">**</span></a>’]
+source_parsers     = {‘.md’: CommonMarkParser}
 source_suffix      = [‘.rst’, ‘.md’, ‘.py’]
 master_doc         = ‘index’
 language           = ‘en’
@@ -108,9 +114,12 @@ html_logo = “_static/vollib-logo.svg”
 html_favicon = “_static/favicon.ico”
 html_theme_path    = [sphinx_rtd_theme.get_html_theme_path()]
 pygments_style = ‘sphinx’</p>
+<p>modindex_common_prefix = [‘py_vollib.’]
+add_module_names = False</p>
 <p># – Options for HTML output ————————————————-
 # <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output">https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output</a></p>
-<p>html_static_path = [‘_static’]</p>
+<p>html_static_path = [‘_static’]
+autoapi_dirs = [‘../py_vollib’]</p>
 
 
            </div>

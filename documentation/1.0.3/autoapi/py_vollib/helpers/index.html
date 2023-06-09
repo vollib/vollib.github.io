@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>py_vollib.helpers &mdash; py_vollib 1.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            py_vollib
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_vollib.helpers</span></code></a><ul>
+<li><a class="reference internal" href="#id1"><p>Duplicate implicit target name: “py_vollib.helpers”.</p>
+</a></li>
+<li><a class="reference internal" href="#about-letsberational">About LetsBeRational:</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#package-contents">Package Contents</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li><a class="reference internal" href="#py_vollib.helpers.ONE_OVER_SQRT_TWO_PI"><code class="docutils literal notranslate"><span class="pre">ONE_OVER_SQRT_TWO_PI</span></code></a></li>
+<li><a class="reference internal" href="#py_vollib.helpers.CALL"><code class="docutils literal notranslate"><span class="pre">CALL</span></code></a></li>
+<li><a class="reference internal" href="#py_vollib.helpers.PUT"><code class="docutils literal notranslate"><span class="pre">PUT</span></code></a></li>
+<li><a class="reference internal" href="#py_vollib.helpers.binary_flag"><code class="docutils literal notranslate"><span class="pre">binary_flag</span></code></a></li>
+<li><a class="reference internal" href="#py_vollib.helpers.test_binary_flag"><code class="docutils literal notranslate"><span class="pre">test_binary_flag()</span></code></a></li>
+<li><a class="reference internal" href="#py_vollib.helpers.pdf"><code class="docutils literal notranslate"><span class="pre">pdf</span></code></a></li>
+<li><a class="reference internal" href="#py_vollib.helpers.forward_price"><code class="docutils literal notranslate"><span class="pre">forward_price()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">py_vollib</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_vollib.helpers</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/py_vollib/helpers/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-py_vollib.helpers">
+<span id="py-vollib-helpers"></span><h1><a class="reference internal" href="#module-py_vollib.helpers" title="py_vollib.helpers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_vollib.helpers</span></code></a><a class="headerlink" href="#module-py_vollib.helpers" title="Permalink to this heading">¶</a></h1>
+<section id="id1">
+<p>A library for option pricing, implied volatility, and
+greek calculation.  py_vollib is based on lets_be_rational,
+a Python wrapper for LetsBeRational by Peter Jaeckel as
+described below.</p>
+<dl class="field-list simple">
+<dt class="field-odd">copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><p>© 2023 Larry Richards</p>
+</dd>
+<dt class="field-even">license<span class="colon">:</span></dt>
+<dd class="field-even"><p>MIT, see LICENSE for more details.</p>
+</dd>
+</dl>
+</section>
+<section id="about-letsberational">
+<h2>About LetsBeRational:<a class="headerlink" href="#about-letsberational" title="Permalink to this heading">¶</a></h2>
+<p>The source code of LetsBeRational resides at www.jaeckel.org/LetsBeRational.7z .</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>========================================================================================
+Copyright © 2013-2014 Peter Jäckel.
+
+Permission to use, copy, modify, and distribute this software is freely granted,
+provided that this notice is preserved.
+
+WARRANTY DISCLAIMER
+The Software is provided &quot;as is&quot; without warranty of any kind, either express or implied,
+including without limitation any implied warranties of condition, uninterrupted use,
+merchantability, fitness for a particular purpose, or non-infringement.
+========================================================================================
+</pre></div>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="constants/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_vollib.helpers.constants</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributions/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_vollib.helpers.distributions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="doctest_helper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_vollib.helpers.doctest_helper</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_vollib.helpers.exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="numerical_greeks/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_vollib.helpers.numerical_greeks</span></code></a></li>
+</ul>
+</div>
+</section>
+<section id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this heading">¶</a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#py_vollib.helpers.test_binary_flag" title="py_vollib.helpers.test_binary_flag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_binary_flag</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#py_vollib.helpers.forward_price" title="py_vollib.helpers.forward_price"><code class="xref py py-obj docutils literal notranslate"><span class="pre">forward_price</span></code></a>(S, t, r)</p></td>
+<td><p>Calculate the forward price of an underlying asset.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#py_vollib.helpers.ONE_OVER_SQRT_TWO_PI" title="py_vollib.helpers.ONE_OVER_SQRT_TWO_PI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ONE_OVER_SQRT_TWO_PI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#py_vollib.helpers.CALL" title="py_vollib.helpers.CALL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CALL</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#py_vollib.helpers.PUT" title="py_vollib.helpers.PUT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PUT</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#py_vollib.helpers.binary_flag" title="py_vollib.helpers.binary_flag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">binary_flag</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#py_vollib.helpers.pdf" title="py_vollib.helpers.pdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdf</span></code></a></p></td>
+<td><p>the probability density function</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="py_vollib.helpers.ONE_OVER_SQRT_TWO_PI">
+<span class="sig-name descname"><span class="pre">ONE_OVER_SQRT_TWO_PI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.3989422804014327</span></em><a class="headerlink" href="#py_vollib.helpers.ONE_OVER_SQRT_TWO_PI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="py_vollib.helpers.CALL">
+<span class="sig-name descname"><span class="pre">CALL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'c'</span></em><a class="headerlink" href="#py_vollib.helpers.CALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="py_vollib.helpers.PUT">
+<span class="sig-name descname"><span class="pre">PUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'p'</span></em><a class="headerlink" href="#py_vollib.helpers.PUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="py_vollib.helpers.binary_flag">
+<span class="sig-name descname"><span class="pre">binary_flag</span></span><a class="headerlink" href="#py_vollib.helpers.binary_flag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="py_vollib.helpers.test_binary_flag">
+<span class="sig-name descname"><span class="pre">test_binary_flag</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/py_vollib/helpers.html#test_binary_flag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py_vollib.helpers.test_binary_flag" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">========================================================</span>
+
+<span class="n">Note</span><span class="p">:</span>  <span class="n">In</span> <span class="s2">&quot;Let&#39;s be Rational,&quot;</span> <span class="n">Peter</span> <span class="n">Jäckel</span> <span class="n">uses</span> <span class="n">θ</span> <span class="k">as</span> <span class="n">a</span> <span class="n">flag</span>
+<span class="n">to</span> <span class="n">distinguish</span> <span class="n">between</span> <span class="n">puts</span> <span class="ow">and</span> <span class="n">calls</span><span class="o">.</span>
+<span class="o">+</span><span class="mi">1</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">call</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">put</span><span class="o">.</span>
+
+<span class="n">See</span> <span class="n">page</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Introduction</span><span class="p">,</span> <span class="n">first</span> <span class="n">paragraph</span><span class="o">.</span>
+
+<span class="n">Throughout</span> <span class="n">py_vollib</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">replaced</span> <span class="k">with</span> <span class="s1">&#39;c&#39;</span> <span class="ow">and</span> <span class="s1">&#39;p&#39;</span><span class="o">.</span>
+<span class="o">========================================================</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">binary_flag</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binary_flag</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span>
+<span class="go">-1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="py_vollib.helpers.pdf">
+<span class="sig-name descname"><span class="pre">pdf</span></span><a class="headerlink" href="#py_vollib.helpers.pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>the probability density function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> – a continuous random variable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="py_vollib.helpers.forward_price">
+<span class="sig-name descname"><span class="pre">forward_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/py_vollib/helpers.html#forward_price"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py_vollib.helpers.forward_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the forward price of an underlying asset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>S</strong> (<em>float</em>) – underlying asset price</p></li>
+<li><p><strong>t</strong> (<em>float</em>) – time to expiration in years</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – risk-free interest rate</p></li>
+</ul>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">S</span> <span class="o">=</span> <span class="mi">95</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="mf">.02</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">F</span> <span class="o">=</span> <span class="n">forward_price</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pre_calculated</span> <span class="o">=</span> <span class="mf">95.95476587299596</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">abs</span><span class="p">(</span><span class="n">F</span><span class="o">-</span><span class="n">pre_calculated</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">.000000001</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Larry Richards.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

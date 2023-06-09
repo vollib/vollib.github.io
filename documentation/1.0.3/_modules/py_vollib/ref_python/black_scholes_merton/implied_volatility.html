@@ -6,11 +6,13 @@
   <title>py_vollib.ref_python.black_scholes_merton.implied_volatility &mdash; py_vollib 1.0.3 documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/doctools.js"></script>
         <script src="../../../../_static/sphinx_highlight.js"></script>
@@ -29,7 +31,6 @@
           
           <a href="../../../../index.html" class="icon icon-home">
             py_vollib
-              <img src="../../../../_static/vollib-logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
@@ -39,8 +40,11 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"></div>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autoapi/index.html">API Reference</a></li>
+</ul>
+
         </div>
       </div>
     </nav>
@@ -102,7 +106,7 @@
 <span class="c1"># -----------------------------------------------------------------------------</span>
 <span class="c1"># FUNCTIONS</span>
 
-<div class="viewcode-block" id="implied_volatility"><a class="viewcode-back" href="../../../../apidoc/py_vollib.ref_python.black_scholes_merton.html#py_vollib.ref_python.black_scholes_merton.implied_volatility.implied_volatility">[docs]</a><span class="k">def</span> <span class="nf">implied_volatility</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
+<div class="viewcode-block" id="implied_volatility"><a class="viewcode-back" href="../../../../autoapi/py_vollib/ref_python/black_scholes_merton/implied_volatility/index.html#py_vollib.ref_python.black_scholes_merton.implied_volatility.implied_volatility">[docs]</a><span class="k">def</span> <span class="nf">implied_volatility</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the Black-Scholes-Merton implied volatility.</span>
 
 <span class="sd">    :param S: underlying asset price</span>
