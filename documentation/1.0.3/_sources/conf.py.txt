@@ -68,7 +68,7 @@ autoapi_dirs = ['../py_vollib']
 # The following is how github pages documentation is configured
 html_static_path = ['/documentation/1.0.3/_static']
 
-
+html_baseurl = '/documentation/1.0.3/'
 
 
 
