@@ -1,0 +1,122 @@
+:py:mod:`py_vollib.black_scholes`
+=================================
+
+.. py:module:: py_vollib.black_scholes
+
+.. autoapi-nested-parse::
+
+   py_vollib.black_scholes
+   ~~~~~~~~~~~~~~~~~~~~~~~
+
+   A library for option pricing, implied volatility, and
+   greek calculation.  py_vollib is based on lets_be_rational,
+   a Python wrapper for LetsBeRational by Peter Jaeckel as
+   described below.
+
+   :copyright: © 2023 Larry Richards
+   :license: MIT, see LICENSE for more details.
+
+   About LetsBeRational:
+   ~~~~~~~~~~~~~~~~~~~~~
+
+   The source code of LetsBeRational resides at www.jaeckel.org/LetsBeRational.7z .
+
+   ::
+
+       ========================================================================================
+       Copyright © 2013-2014 Peter Jäckel.
+
+       Permission to use, copy, modify, and distribute this software is freely granted,
+       provided that this notice is preserved.
+
+       WARRANTY DISCLAIMER
+       The Software is provided "as is" without warranty of any kind, either express or implied,
+       including without limitation any implied warranties of condition, uninterrupted use,
+       merchantability, fitness for a particular purpose, or non-infringement.
+       ========================================================================================
+
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   greeks/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   implied_volatility/index.rst
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   py_vollib.black_scholes.undiscounted_black
+   py_vollib.black_scholes.black_scholes
+
+
+
+.. py:function:: undiscounted_black(F, K, sigma, t, flag)
+
+   Calculate the **undiscounted** Black option price.
+
+   :param F: underlying futures price
+   :type F: float
+   :param K: strike price
+   :type K: float
+   :param sigma: annualized standard deviation, or volatility
+   :type sigma: float
+   :param t: time to expiration in years
+   :type t: float   
+
+   >>> F = 100
+   >>> K = 100
+   >>> sigma = .2
+   >>> flag = 'c'
+   >>> t = .5
+   >>> undiscounted_black(F, K, sigma, t, flag)
+   5.637197779701664
+
+
+
+.. py:function:: black_scholes(flag, S, K, t, r, sigma)
+
+   Return the Black-Scholes option price.
+
+   :param S: underlying asset price
+   :type S: float
+   :param K: strike price
+   :type K: float
+   :param sigma: annualized standard deviation, or volatility
+   :type sigma: float
+   :param t: time to expiration in years
+   :type t: float
+   :param r: risk-free interest rate
+   :type r: float
+   :param flag: 'c' or 'p' for call or put.
+   :type flag: str    
+
+
+   >>> c = black_scholes('c',100,90,.5,.01,.2) 
+   >>> abs(c - 12.111581435) < .000001
+   True
+
+   >>> p = black_scholes('p',100,90,.5,.01,.2) 
+   >>> abs(p - 1.66270456231) < .000001
+   True
+
+

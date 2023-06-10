@@ -1,0 +1,218 @@
+:py:mod:`py_vollib.ref_python.black`
+====================================
+
+.. py:module:: py_vollib.ref_python.black
+
+.. autoapi-nested-parse::
+
+   py_vollib.ref_python.black
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   A library for option pricing, implied volatility, and
+   greek calculation.  py_vollib is based on lets_be_rational,
+   a Python wrapper for LetsBeRational by Peter Jaeckel as
+   described below.
+
+   :copyright: © 2023 Larry Richards
+   :license: MIT, see LICENSE for more details.
+
+   py_vollib.ref_python is a pure python version of py_vollib without any dependence on LetsBeRational. It is provided purely as a reference implementation for sanity checking. It is not recommended for industrial use.
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   greeks/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   implied_volatility/index.rst
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   py_vollib.ref_python.black.d1
+   py_vollib.ref_python.black.d2
+   py_vollib.ref_python.black.black_call
+   py_vollib.ref_python.black.black_put
+   py_vollib.ref_python.black.black
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   py_vollib.ref_python.black.N
+
+
+.. py:data:: N
+
+   From John C. Hull, "Options, Futures and Other Derivatives,"
+   7th edition, Chapter 16.8, page 342
+
+
+.. py:function:: d1(F, K, t, r, sigma)
+
+   Calculate the d1 component of the Black PDE.
+
+   :param F: underlying futures price
+   :type F: float
+   :param K: strike price
+   :type K: float
+   :param sigma: annualized standard deviation, or volatility
+   :type sigma: float
+   :param t: time to expiration in years
+   :type t: float
+   :param r: risk-free interest rate
+   :type r: float
+
+   Doctest using Hull, page 343, example 16.6
+
+   >>> F = 20
+   >>> K = 20
+   >>> r = .09
+   >>> t = 4/12.0
+   >>> sigma = 0.25
+
+   >>> calculated_value = d1(F, K, t, r, sigma)
+   >>> #0.0721687836487
+   >>> text_book_value = 0.07216
+   >>> abs(calculated_value - text_book_value) < .00001
+   True
+
+
+.. py:function:: d2(F, K, t, r, sigma)
+
+   Calculate the d2 component of the Black PDE.
+
+   :param F: underlying futures price
+   :type F: float
+   :param K: strike price
+   :type K: float
+   :param sigma: annualized standard deviation, or volatility
+   :type sigma: float
+   :param t: time to expiration in years
+   :type t: float
+   :param r: risk-free interest rate
+   :type r: float
+
+   Hull, page 343, example 16.6
+
+   >>> F = 20
+   >>> K = 20
+   >>> r = .09
+   >>> t = 4/12.0
+   >>> sigma = 0.25
+
+   >>> calculated_value = d2(F, K, t, r, sigma)
+   >>> #-0.0721687836487
+   >>> text_book_value = -0.07216
+   >>> abs(calculated_value - text_book_value) < .00001
+   True
+
+
+.. py:function:: black_call(F, K, t, r, sigma)
+
+   Calculate the price of a call using Black.  (Python
+   implementation for reference.)
+
+   :param F: underlying futures price
+   :type F: float
+   :param K: strike price
+   :type K: float
+   :param sigma: annualized standard deviation, or volatility
+   :type sigma: float
+   :param t: time to expiration in years
+   :type t: float
+   :param r: risk-free interest rate
+   :type r: float
+
+   Hull, page 343, example 16.7
+
+   >>> F = 620
+   >>> K = 600
+   >>> r = .05
+   >>> sigma = .2
+   >>> t = 0.5
+   >>> calculated_value = black_call(F, K, t, r, sigma)
+   >>> #44.1868533121
+   >>> text_book_value = 44.19
+   >>> abs(calculated_value - text_book_value) < .01
+   True
+
+
+.. py:function:: black_put(F, K, t, r, sigma)
+
+   Calculate the price of a put using Black.  (Python
+   implementation for reference.)
+
+   :param F: underlying futures price
+   :type F: float
+   :param K: strike price
+   :type K: float
+   :param sigma: annualized standard deviation, or volatility
+   :type sigma: float
+   :param t: time to expiration in years
+   :type t: float
+   :param r: risk-free interest rate
+   :type r: float
+
+   Hull, page 338, example 16.6
+
+   >>> F = 20
+   >>> K = 20
+   >>> r = .09
+   >>> sigma = .25
+   >>> t = 4/12.0
+   >>> calculated_value = black_put(F, K, t, r, sigma)
+   >>> # 1.11664145656
+   >>> text_book_value = 1.12
+   >>> abs(calculated_value - text_book_value) < .01
+   True
+
+
+.. py:function:: black(flag, F, K, t, r, sigma)
+
+   Calculate the (discounted) Black option price.
+
+   :param F: underlying futures price
+   :type F: float
+   :param K: strike price
+   :type K: float
+   :param sigma: annualized standard deviation, or volatility
+   :type sigma: float
+   :param t: time to expiration in years
+   :type t: float
+
+   >>> F = 100
+   >>> K = 100
+   >>> sigma = .2
+   >>> flag = 'c'
+   >>> r = .02
+   >>> t = .5
+
+   >>> expected = 5.5811067246048118
+   >>> actual = black(flag, F, K, t, r, sigma)
+   >>> abs(expected - actual) < 1e-12
+   True
+
+

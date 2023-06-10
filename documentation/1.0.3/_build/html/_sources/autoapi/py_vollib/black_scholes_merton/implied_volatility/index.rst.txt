@@ -1,0 +1,94 @@
+:py:mod:`py_vollib.black_scholes_merton.implied_volatility`
+===========================================================
+
+.. py:module:: py_vollib.black_scholes_merton.implied_volatility
+
+.. autoapi-nested-parse::
+
+   py_vollib.black_scholes_merton.implied_volatility
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Copyright © 2023 Larry Richards
+
+   A library for option pricing, implied volatility, and
+   greek calculation.  py_vollib is based on lets_be_rational,
+   a Python wrapper for LetsBeRational by Peter Jaeckel as
+   described below.
+
+   :copyright: © 2023 Larry Richards
+   :license: MIT, see LICENSE for more details.
+
+   About LetsBeRational:
+   ~~~~~~~~~~~~~~~~~~~~~
+
+   The source code of LetsBeRational resides at www.jaeckel.org/LetsBeRational.7z .
+
+   ::
+
+       ========================================================================================
+       Copyright © 2013-2014 Peter Jäckel.
+
+       Permission to use, copy, modify, and distribute this software is freely granted,
+       provided that this notice is preserved.
+
+       WARRANTY DISCLAIMER
+       The Software is provided "as is" without warranty of any kind, either express or implied,
+       including without limitation any implied warranties of condition, uninterrupted use,
+       merchantability, fitness for a particular purpose, or non-infringement.
+       ========================================================================================
+
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   py_vollib.black_scholes_merton.implied_volatility.implied_volatility
+
+
+
+.. py:function:: implied_volatility(price, S, K, t, r, q, flag)
+
+   Calculate the Black-Scholes-Merton implied volatility.
+
+   :param S: underlying asset price
+   :type S: float
+   :param K: strike price
+   :type K: float
+   :param sigma: annualized standard deviation, or volatility
+   :type sigma: float
+   :param t: time to expiration in years
+   :type t: float
+   :param r: risk-free interest rate
+   :type r: float
+   :param q: annualized continuous dividend rate
+   :type q: float 
+   :param flag: 'c' or 'p' for call or put.
+   :type flag: str
+
+   >>> S = 100
+   >>> K = 100
+   >>> sigma = .2
+   >>> r = .01
+   >>> flag = 'c'
+   >>> t = .5
+   >>> q = 0
+
+   >>> price = black_scholes_merton(flag, S, K, t, r, sigma, q)
+   >>> iv = implied_volatility(price, S, K, t, r, q, flag)
+
+   >>> expected_price = 5.87602423383
+   >>> expected_iv = 0.2
+
+   >>> abs(expected_price - price) < 0.00001
+   True
+   >>> abs(expected_iv - iv) < 0.00001
+   True
+
+

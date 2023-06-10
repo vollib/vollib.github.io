@@ -1,0 +1,116 @@
+:py:mod:`py_vollib.black_scholes_merton`
+========================================
+
+.. py:module:: py_vollib.black_scholes_merton
+
+.. autoapi-nested-parse::
+
+   py_vollib.black_scholes_merton
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   A library for option pricing, implied volatility, and
+   greek calculation.  py_vollib is based on lets_be_rational,
+   a Python wrapper for LetsBeRational by Peter Jaeckel as
+   described below.
+
+   :copyright: © 2023 Larry Richards
+   :license: MIT, see LICENSE for more details.
+
+   About LetsBeRational:
+   ~~~~~~~~~~~~~~~~~~~~~
+
+   The source code of LetsBeRational resides at www.jaeckel.org/LetsBeRational.7z .
+
+   ::
+
+       ========================================================================================
+       Copyright © 2013-2014 Peter Jäckel.
+
+       Permission to use, copy, modify, and distribute this software is freely granted,
+       provided that this notice is preserved.
+
+       WARRANTY DISCLAIMER
+       The Software is provided "as is" without warranty of any kind, either express or implied,
+       including without limitation any implied warranties of condition, uninterrupted use,
+       merchantability, fitness for a particular purpose, or non-infringement.
+       ========================================================================================
+
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   greeks/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   implied_volatility/index.rst
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   py_vollib.black_scholes_merton.black_scholes_merton
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   py_vollib.black_scholes_merton.binary_flag
+
+
+.. py:data:: binary_flag
+
+   
+
+.. py:function:: black_scholes_merton(flag, S, K, t, r, sigma, q)
+
+   Return the Black-Scholes-Merton option price.
+
+   :param S: underlying asset price
+   :type S: float
+   :param K: strike price
+   :type K: float
+   :param sigma: annualized standard deviation, or volatility
+   :type sigma: float
+   :param t: time to expiration in years
+   :type t: float
+   :param r: risk-free interest rate
+   :type r: float
+   :param q: annualized continuous dividend rate
+   :type q: float 
+
+   From Espen Haug, The Complete Guide To Option Pricing Formulas
+   Page 4
+
+   >>> S=100
+   >>> K=95
+   >>> q=.05
+   >>> t = 0.5
+   >>> r = 0.1
+   >>> sigma = 0.2
+
+   >>> p_published_value = 2.4648
+   >>> p_calc = black_scholes_merton('p', S, K, t, r, sigma, q)
+   >>> abs(p_published_value - p_calc) < 0.0001
+   True
+
+
