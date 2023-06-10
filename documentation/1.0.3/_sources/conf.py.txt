@@ -70,5 +70,12 @@ html_static_path = ['/documentation/1.0.3/_static']
 
 html_baseurl = '/documentation/1.0.3/'
 
+html_context = {
+    'display_github': True,
+    'github_repo': 'vollib/py_vollib',
+    'github_version': 'master/',
+    'conf_py_path': '/docs/source/',
+}
+
 
 
