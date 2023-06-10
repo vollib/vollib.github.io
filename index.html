@@ -63,16 +63,17 @@
             <p>
             Based on popular demand, we have released py_vollib and py_lets_be_rational. With these new versions
             we have eliminated the dependencies on C and SWIG, as both libraries are in pure Python. Each is
-            compatible with Python 3.x as well as Python 2.7. The original C/SWIG-dependent versions will remain
-            available indefinitely as lets_be_rational and vollib.
+            compatible with Python 3.x as well as Python 2.7. The original C/SWIG-dependent versions are now 
+            deprecated and so Python developers still using the legacy version should plan to migrate to py_vollib. 
             </p>
             <p>
             Translation of LetsBeRational from C to Python resulted in significantly slower performance. However,
             the use of Numba restored the Python code's execution speed close to the original levels of C+SWIG.
             </p>
             <p>
-            In the same spirit, as of this release, Gammon Capital are pleased to host pure Javascript and pure
-            Java versions of both LetsBeRational and Vollib as open source github projects.
+            At the same time as releaesing py_vollib, the sponsors released pure Javascript and pure
+            Java versions as j_vollib and js_vollib, respectively. Java and Javascript developers
+                should refer to the py_vollib documentation.
             </p>
             <p>
             If you use any version of LetsBeRational or Vollib we would be most grateful if you would kindly
