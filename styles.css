@@ -147,6 +147,7 @@ a.active:hover {
 
 footer {
     padding: 12px;
+    margin: 0;
     background-color: #5ba94a;
     box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -160,6 +161,22 @@ h3.small-title {
     width: 173px;
     float: left;
     padding-bottom: 15px;
+}
+
+.codelet {
+    width: 100%;
+    height: 35em;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+}
+
+.codelet-text {
+    clear: left;
+    font-weight: 400;
+    color: #0a7099;
 }
 
 .ikayzo {
