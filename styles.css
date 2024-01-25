@@ -158,7 +158,6 @@ h3.small-title {
 }
 
 .sponsor-image {
-    width: 173px;
     float: left;
     padding-bottom: 15px;
 }
@@ -180,9 +179,12 @@ h3.small-title {
 }
 
 .ikayzo {
-    width: 155px;
+    height: 57px;
     padding-top: 2px;
-    padding-bottom: 0px !important;
+}
+
+.scale {
+    height: 50px;
 }
 
 .sponsor-spacer {
