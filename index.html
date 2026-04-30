@@ -20,28 +20,30 @@
             <a href="license.html">License</a>
         </div>
         <div class="subheader">
-            <h2 class="subheader-headline">Blazingly Fast & Accurate</h2>
+            <h2 class="subheader-headline">Fast &amp; Accurate Option Analytics</h2>
             <p class="subheader-body">
                 Option Pricing &bull; Implied Volatility &bull; Greeks<br/>
-                Python &bull; TypeScript &bull; Java &bull; JavaScript<br/>
+                Python package: vollib 1.0.7 &bull; TypeScript package: vollib<br/>
             </p>
         </div>
     </header>
     <div class="flex">
         <div>
             <p>
-            Vollib is a collection of libraries for calculating option prices, implied volatility and greeks.
-            What makes vollib special is that it is built around Peter Jäckel's LetsBeRational, an extremely
-            fast and accurate technique for obtaining Black's implied volatility.
+            Vollib is a family of libraries for calculating option prices, implied volatility, and greeks.
+            The current Python package is <code>vollib</code> 1.0.7 and later. It supports Python 3.9 through
+            3.12 and should be installed with <code>pip install -U vollib</code>.
             </p>
             <p>
-            LetsBeRational can obtain implied volatility from option prices with as little as two iterations
-            to maximum attainable precision on standard (64 bit floating point) hardware for all possible inputs.
+            Existing <code>py_vollib</code> installs and imports continue to work through a deprecated transition
+            package and compatibility namespace, but new Python code should import from <code>vollib</code>.
+            The temporary <code>vollib-test</code> package is superseded by the official release.
             </p>
             <p>
-            Another advantage of LetsBeRational is its fast and accurate implementation of the cumulative normal
-            distribution function. Jäckel's implementation provides better accuracy across a wider range of inputs,
-            while being two orders of magnitude faster than its equivalent in scipy.stats.
+            What makes vollib special is that it is built around Peter Jäckel's LetsBeRational, a fast and
+            accurate technique for obtaining Black implied volatility from option prices. LetsBeRational is
+            designed to reach machine precision in at most two iterations, and usually one, on standard 64-bit
+            floating point hardware.
             </p>
             <p>
             Building on this solid foundation, vollib provides functions to calculate option prices, implied
@@ -50,8 +52,7 @@
             </p>
             <h3 class="small-title">Sponsors</h3>
             <p>
-            <a href="https://finance.ikayzo.com"><img src="images/ikayzo-logo.svg" class="sponsor-image ikayzo sponsor-spacer" alt="ikayzo logo"/></a>
-            <img src="images/scale-logo.svg" class="sponsor-image scale" alt="scale logo"/><br>
+            <a href="https://finance.ikayzo.com"><img src="images/ikayzo-logo.svg" class="sponsor-image ikayzo" alt="ikayzo logo"/></a><br>
             </p>
             <!--
             <p class="codelet-text">
@@ -61,21 +62,24 @@
         </div>
         <div>
             <p>
-            <a href="https://github.com/vollib/lets_be_rational">LetsBeRational</a> was originally written in C.
-            The legacy Python package, vollib 0.1.x, used the SWIG-wrapped implementation and targeted Python 2.7.
+            <a href="https://github.com/vollib/lets_be_rational">LetsBeRational</a> was originally written in C++.
+            The legacy Python package, <code>vollib</code> 0.1.x, used the SWIG-wrapped implementation and targeted
+            Python 2.7.
             </p>
             <p>
-            The current Python package is vollib 1.0.7 and later. It is pure Python, supports Python 3.9 through
-            3.12, and uses py_lets_be_rational. Existing py_vollib imports continue to work through a deprecated
-            compatibility namespace, but new Python code should import from vollib.
+            The <code>py_vollib</code> package name was introduced during the Python 3 transition. Starting with
+            version 1.0.7, the canonical Python package name is again <code>vollib</code>. The old Python 2.7 line
+            remains available only for pinned legacy installs.
             </p>
             <p>
-            Install the current Python package with <code>pip install vollib</code>. Users who still need the legacy
-            Python 2.7/C-SWIG implementation should pin <code>vollib==0.1.5</code>.
+            A strictly positive strike price is part of vollib's supported input domain for Black, Black-Scholes,
+            and Black-Scholes-Merton calculations. This preserves the behavior of the LetsBeRational-backed
+            implementation; callers who want to support limiting cases such as a zero-strike call should handle
+            those boundaries in application code.
             </p>
             <p>
-            TypeScript, Java, and JavaScript implementations are maintained separately. See the Source and
-            Documentation pages for the relevant repositories and API documentation.
+            TypeScript, Java, and JavaScript repositories are listed on the Source page. The Python API
+            documentation for <code>vollib</code> 1.0.7 is available on the Documentation page.
             </p>
             <p>
             If you use any version of LetsBeRational or Vollib we would be most grateful if you would kindly
@@ -92,7 +96,7 @@
     -->
 
     <footer>
-        &copy; 2023 Larry Richards
+        &copy; 2026 Larry Richards
     </footer>
 </body>
 </html>
