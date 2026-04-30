@@ -23,7 +23,7 @@
             <h2 class="subheader-headline">Blazingly Fast & Accurate</h2>
             <p class="subheader-body">
                 Option Pricing &bull; Implied Volatility &bull; Greeks<br/>
-                Python &bull; Java &bull; TypeScript &bull; WASM &bull; Kotlin<br/>
+                Python &bull; TypeScript &bull; Java &bull; JavaScript<br/>
             </p>
         </div>
     </header>
@@ -61,27 +61,24 @@
         </div>
         <div>
             <p>
-            <a href="https://github.com/vollib/lets_be_rational">LetsBeRational</a> was originally written in C, and the Python lets_be_rational Version 1.0.9 exposes
-            the original functions by means of a SWIG wrapper. Vollib Version 0.1.5 uses the SWIG-wrapped version
-            of lets_be_rational, and is incompatible with Python 3.x.
+            <a href="https://github.com/vollib/lets_be_rational">LetsBeRational</a> was originally written in C.
+            The legacy Python package, vollib 0.1.x, used the SWIG-wrapped implementation and targeted Python 2.7.
             </p>
             <p>
-            Based on popular demand, we have released py_vollib and py_lets_be_rational. With these new versions
-            we have eliminated the dependencies on C and SWIG, as both libraries are in pure Python. Each is
-            compatible with Python 3.x as well as Python 2.7. The original C/SWIG-dependent versions are now 
-            deprecated and so Python developers still using the legacy version should plan to migrate to py_vollib. 
+            The current Python package is vollib 1.0.7 and later. It is pure Python, supports Python 3.9 through
+            3.12, and uses py_lets_be_rational. Existing py_vollib imports continue to work through a deprecated
+            compatibility namespace, but new Python code should import from vollib.
             </p>
             <p>
-            Translation of LetsBeRational from C to Python resulted in significantly slower performance. However,
-            the use of Numba restored the Python code's execution speed close to the original levels of C+SWIG.
+            Install the current Python package with <code>pip install vollib</code>. Users who still need the legacy
+            Python 2.7/C-SWIG implementation should pin <code>vollib==0.1.5</code>.
             </p>
             <p>
-            At the same time as releasing py_vollib, the sponsors released pure Javascript and pure
-            Java versions as j_vollib and js_vollib, respectively. Java and Javascript developers
-                should refer to the py_vollib documentation.
+            TypeScript, Java, and JavaScript implementations are maintained separately. See the Source and
+            Documentation pages for the relevant repositories and API documentation.
             </p>
             <p>
-            If you use any version of LetsBeRationacxl or Vollib we would be most grateful if you would kindly
+            If you use any version of LetsBeRational or Vollib we would be most grateful if you would kindly
             give credit by linking back to this page.
             </p>
         </div>

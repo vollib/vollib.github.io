@@ -19,10 +19,10 @@
             <a href="license.html">License</a>
         </div>
         <div class="subheader">
-            <h2 class="subheader-headline">Multiplatform</h2>
+            <h2 class="subheader-headline">Installation</h2>
             <p class="subheader-body">
-                vollib is available for Python, Java &amp; JavaScript today.<br/>
-                Kotlin, TypeScript and WASM are under development.
+                Current Python package: vollib 1.0.7<br/>
+                Supports Python 3.9 through 3.12
             </p>
         </div>
     </header>
@@ -30,28 +30,30 @@
         <div class="column-one flex-col">
             <h3 class="small-title">Python</h3>
             <ul>
-                <li><a href="https://github.com/vollib/py_vollib#dependencies">py_vollib</a></li>
+                <li><code>pip install vollib</code></li>
+                <li><a href="https://github.com/vollib/py_vollib#dependencies">Source and dependency notes</a></li>
                 <li><a href="https://github.com/vollib/py_lets_be_rational#dependencies">py_lets_be_rational</a></li>
             </ul>
 
-            <h3 class="small-title">JVM</h3>
+            <h3 class="small-title">Deprecated Python Alias</h3>
             <ul>
-                <li><a href="https://github.com/vollib/j_lets_be_rational/">Java: j_lets_be_rational</a></li>
-                <li><a href="#">Kotlin</a> (coming soon)</li>
+                <li><code>pip install py_vollib</code> installs the matching vollib release</li>
+                <li>New code should import from <code>vollib</code></li>
             </ul>
         </div>
         <div>
-            <h3 class="small-title">C + Swig + Python 2</h3>
+            <h3 class="small-title">Legacy Python 2.7</h3>
             <ul>
-                <li><a href="https://github.com/vollib/vollib#dependencies">vollib</a></li>
+                <li><code>pip install vollib==0.1.5</code></li>
+                <li><a href="https://github.com/vollib/vollib#dependencies">Legacy vollib source</a></li>
                 <li><a href="https://github.com/vollib/lets_be_rational#dependencies">lets_be_rational</a></li>
             </ul>
 
-            <h3 class="small-title">Web</h3>
+            <h3 class="small-title">Other Languages</h3>
             <ul>
-                <li><a href="https://github.com/vollib/js_lets_be_rational/">JavaScript: js_vollib</a></li>
-                <li><a href="#">TypeScript</a> (coming soon)</li>
-                <li><a href="#">WASM</a> (coming soon)</li>
+                <li><a href="https://github.com/vollib/vollib-ts">TypeScript: vollib</a></li>
+                <li><a href="https://github.com/vollib/js_vollib">JavaScript: js_vollib</a></li>
+                <li><a href="https://github.com/vollib/j_vollib">Java: j_vollib</a></li>
             </ul>
         </div>
     </div>
