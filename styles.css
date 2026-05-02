@@ -24,6 +24,7 @@ body {
     max-width: 450px;
     padding: 20px;
     text-align: left;
+    width: 100%;
 }
 
 /* Header & Footer Area */
@@ -66,6 +67,28 @@ footer {
     padding-bottom: 8px;
     line-height: 1.6;
     margin-block: 0;
+}
+
+.subheader-action {
+    margin: 8px 0 0;
+}
+
+.subheader-action a,
+.subheader-action a:visited {
+    background-color: #ffefc3;
+    border: 0;
+    color: #0a7099;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12pt;
+    font-weight: 500;
+    padding: 10px 14px;
+    text-decoration: none;
+}
+
+.subheader-action a:hover {
+    background-color: #ffffff;
+    color: #5ba94a;
 }
 
 .logo_area, .subheader { padding: 20px !important; }
@@ -136,6 +159,7 @@ pre {
     margin: 8px 0 14px 18px;
     overflow-x: auto;
     padding: 12px 14px;
+    max-width: 100%;
 }
 
 pre code {
@@ -241,15 +265,27 @@ ul.a {
 @media (max-width: 799px) {
     .flex {
         flex-direction: column;
+        align-items: stretch;
     }
 
     .flex > div {
-        max-width: 650px;
-        padding-bottom: 0px;
+        max-width: none;
+        min-width: 0;
+        padding: 18px 16px 0;
+    }
+
+    .nav {
+        overflow: visible;
+    }
+
+    .nav a {
+        padding: 10px 8px;
+    }
+
+    pre {
+        margin-left: 0;
     }
 }
-
-
 
 
 
